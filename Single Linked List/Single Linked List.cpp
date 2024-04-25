@@ -75,6 +75,9 @@ bool deleteNode(int nim) {
     if (serachNode(nim, previous, current) == false)
         return false;
     previous->next = current->next;
+    if (current == START)
+        START = current->next;
+    return true;
 }
 
 int main()
